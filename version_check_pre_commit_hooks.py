@@ -25,9 +25,9 @@ def extract_python_version_from_runtime_txt() -> str:
         runtime_version = f.read().strip().split("-")[-1]
     return runtime_version
 
-def main():
+def python_version_runtime_txt_match_pipfile_lock():
     """
-    Main execution function. Compares the Python version from Pipfile.lock and runtime.txt.
+    Check for Python version mismatch between Pipfile.lock and runtime.txt.
     Exits with a non-zero status code if there's a mismatch or if files are missing.
     """
     if not os.path.exists("Pipfile.lock"):
@@ -44,6 +44,3 @@ def main():
     if pipfile_lock_version != runtime_version:
         print(f"Python version mismatch! Pipfile.lock: {pipfile_lock_version}, runtime.txt: {runtime_version}")
         exit(1)
-
-if __name__ == "__main__":
-    main()
