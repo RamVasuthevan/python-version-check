@@ -1,6 +1,6 @@
 -   id: python-version-check-runtime-txt
     name: python-version-check-runtime-txt
     description: Ensure the Python version in runtime.txt matches Pipfile.lock
-    entry: python-version-check/check_runtime_txt.py
+    entry: ./python-version-check/check_runtime_txt.py
     language: python
     types: [file]
