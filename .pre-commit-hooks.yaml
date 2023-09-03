@@ -1,0 +1,8 @@
+-   id: python-version-runtime-txt-match-pipfile-lock
+    name: python-version-runtime-txt-match-pipfile-lock
+    description: Ensure the Python version in runtime.txt matches Pipfile.lock
+    entry: python_version_runtime_txt_match_pipfile_lock
+    language: python
+    types: [file]
+    always_run: true
+    pass_filenames: false
